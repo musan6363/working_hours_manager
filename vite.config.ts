@@ -2,7 +2,10 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
 
+const BASE_PATH = '/working_hours_manager/'; 
+
 export default defineConfig({
+  base: BASE_PATH, 
   plugins: [
     react(),
     VitePWA({
@@ -16,8 +19,8 @@ export default defineConfig({
         theme_color: '#214195',
         background_color: '#fffaf2',
         display: 'standalone',
-        start_url: '/',
-        scope: '/',
+        start_url: BASE_PATH,
+        scope: BASE_PATH,
         lang: 'ja',
         icons: [
           {
