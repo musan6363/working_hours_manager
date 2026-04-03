@@ -1,0 +1,50 @@
+:root {
+  font-family: "Avenir Next", "Hiragino Sans", "Yu Gothic", sans-serif;
+  color: #201713;
+  background:
+    radial-gradient(circle at top, rgba(255, 212, 143, 0.56), transparent 30%),
+    linear-gradient(180deg, #fff6ea 0%, #fffdf8 52%, #eef5ff 100%);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 165, 0, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 80%, rgba(60, 120, 255, 0.12), transparent 22%);
+  pointer-events: none;
+}
+
+#root {
+  position: relative;
+  min-height: 100vh;
+  padding: 1rem;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}

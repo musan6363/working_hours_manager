@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Working Hours Manager">
+  <rect width="64" height="64" rx="16" fill="#214195" />
+  <circle cx="32" cy="26" r="15" fill="#ffbd59" />
+  <circle cx="32" cy="26" r="8" fill="#214195" />
+  <rect x="29" y="23" width="6" height="21" rx="3" fill="#ffbd59" />
+</svg>
