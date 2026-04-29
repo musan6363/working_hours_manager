@@ -18,6 +18,7 @@ import {
   saveDailyDraft,
   saveStandardHours,
 } from './lib/storage'
+import { exportMonthlyCsv } from './lib/export'
 import type { DailyAttendanceDraft, DailyAttendanceRecord } from './types/attendance'
 
 type AppScreen = 'daily' | 'monthly' | 'settings'
@@ -436,6 +437,18 @@ export default function App() {
                   }}
                 >
                   次月
+                </button>
+                <button
+                    className="ghost-button"
+                    type="button"
+                    onClick={() => {
+                      if (monthlySummary) {
+                        const label = formatMonthLabel(getMonthKey(draft.date))
+                        exportMonthlyCsv(monthlySummary.records, label)
+                      }
+                    }}
+                  >
+                  CSV出力
                 </button>
               </div>
             </div>
